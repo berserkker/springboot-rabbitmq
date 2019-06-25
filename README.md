@@ -11,7 +11,8 @@ springboot+rabbitmq+MySQL实现消息同步
 5000条数据， 数据库直接插入，全部插入大概要100s
 
 ## 计划
-增加rabbitMQ高可用配置，使用Federation插件集群，尝试异地消息同步
+- 增加rabbitMQ高可用配置，使用Federation插件集群，尝试异地消息同步
+- 增加canal使用，监控数据库变化，实时发送消息
 
 
 
