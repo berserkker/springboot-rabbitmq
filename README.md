@@ -1,5 +1,5 @@
 # springboot-rabbitmq
-springboot+rabbitmq+MySQL实现消息同步
+springboot+rabbitmq+MySQL实现消息同步，传输java对象字节流
 
 ## 背景
 为了实现多数据中心，异地消息同步，测试使用消息队列，和不使用消息队列的不同效果
