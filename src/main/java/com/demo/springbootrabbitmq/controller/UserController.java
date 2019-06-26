@@ -2,7 +2,7 @@ package com.demo.springbootrabbitmq.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.demo.springbootrabbitmq.entity.User;
-import com.demo.springbootrabbitmq.message.Sender;
+import com.demo.springbootrabbitmq.message.LocalSender;
 import com.demo.springbootrabbitmq.service.UserService;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -23,7 +23,7 @@ public class UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    private Sender sender;
+    private LocalSender sender;
 
     private static final AtomicInteger i = new AtomicInteger(40000);
 
