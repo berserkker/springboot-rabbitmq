@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.Date;
 
-@Component
+//@Component
 public class LocalSender {
 
     private static final Logger logger = LoggerFactory.getLogger(LocalSender.class);

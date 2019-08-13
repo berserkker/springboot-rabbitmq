@@ -11,15 +11,15 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
+//@Component
 public class LinuxReceiver {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LinuxReceiver.class);
     @Autowired
     private UserService userService;
 
-    @RabbitHandler
-    @RabbitListener(queues = "user", containerFactory = "linuxFactory")
+//    @RabbitHandler
+//    @RabbitListener(queues = "user", containerFactory = "linuxFactory")
     public void process(byte[] objBytes) {
         User user = (User) TranslateObject.getObjectFromBytes(objBytes);
         LOGGER.info("收到linux mq的user队列消息" + user.getName());

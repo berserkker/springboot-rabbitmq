@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-@Configuration
+//@Configuration
 public class RabbitConfig {
 
-    @Bean(name = "localConnectionFactory")
+//    @Bean(name = "localConnectionFactory")
     @Primary
     public ConnectionFactory localConnectionFactory(
             @Value("${spring.rabbitmq.local.host}") String host,
@@ -31,7 +31,7 @@ public class RabbitConfig {
         return connectionFactory;
     }
 
-    @Bean(name = "linuxConnectionFactory")
+//    @Bean(name = "linuxConnectionFactory")
     public ConnectionFactory linuxConnectionFactory(
             @Value("${spring.rabbitmq.linux.host}") String host,
             @Value("${spring.rabbitmq.linux.port}") int port,
@@ -46,7 +46,7 @@ public class RabbitConfig {
         return connectionFactory;
     }
 
-    @Bean(name = "localRabbitTemplate")
+//    @Bean(name = "localRabbitTemplate")
     @Primary
     public RabbitTemplate localRabbitTemplate(
             @Qualifier("localConnectionFactory") ConnectionFactory connectionFactory
@@ -55,7 +55,7 @@ public class RabbitConfig {
         return localRabbitTemplate;
     }
 
-    @Bean(name = "linuxRabbitTemplate")
+//    @Bean(name = "linuxRabbitTemplate")
     public RabbitTemplate linuxRabbitTemplate(
             @Qualifier("linuxConnectionFactory") ConnectionFactory connectionFactory
     ) {
@@ -63,7 +63,7 @@ public class RabbitConfig {
         return linuxRabbitTemplate;
     }
 
-    @Bean(name = "localFactory")
+//    @Bean(name = "localFactory")
     public SimpleRabbitListenerContainerFactory localFactory(
             SimpleRabbitListenerContainerFactoryConfigurer configurer,
             @Qualifier("localConnectionFactory") ConnectionFactory connectionFactory
@@ -73,7 +73,7 @@ public class RabbitConfig {
         return factory;
     }
 
-    @Bean(name = "linuxFactory")
+//    @Bean(name = "linuxFactory")
     public SimpleRabbitListenerContainerFactory linuxFactory(
             SimpleRabbitListenerContainerFactoryConfigurer configurer,
             @Qualifier("linuxConnectionFactory") ConnectionFactory connectionFactory
@@ -83,7 +83,7 @@ public class RabbitConfig {
         return factory;
     }
 
-    @Bean
+//    @Bean
     public Queue queue() {
         System.out.println("configuration queue ........................");
         return new Queue("user");

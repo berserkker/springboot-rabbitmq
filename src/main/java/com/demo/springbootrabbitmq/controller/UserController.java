@@ -22,15 +22,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UserController {
     @Autowired
     private UserService userService;
-    @Autowired
-    private LocalSender sender;
+//    @Autowired
+//    private LocalSender sender;
 
     private static final AtomicInteger i = new AtomicInteger(40000);
 
     @RequestMapping(method = RequestMethod.PUT, value = "/message")
     public String inserUser(@RequestBody User user) {
         //调用消息队列
-        sender.send(user);
+//        sender.send(user);
         return "success";
     }
 

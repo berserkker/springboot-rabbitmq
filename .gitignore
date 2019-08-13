@@ -5,6 +5,7 @@ target/
 .mvn/
 !**/src/main/**
 !**/src/test/**
+bash.exe.stackdump
 
 ### STS ###
 .apt_generated

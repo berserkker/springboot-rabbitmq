@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.Date;
 
-@Component
+//@Component
 public class LinuxSender {
 
     private static final Logger logger = LoggerFactory.getLogger(LinuxSender.class);
 
-    @Resource(name = "linuxRabbitTemplate")
+//    @Resource(name = "linuxRabbitTemplate")
     private RabbitTemplate rabbitTemplate;
 
     public void send(User user) {
